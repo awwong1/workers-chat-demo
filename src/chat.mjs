@@ -93,6 +93,7 @@ async function handleErrors(request, func) {
 // adding other handlers for other types of events over time.
 export default {
   async fetch(request, env) {
+    console.log("==== request", JSON.stringify(request, undefined, 2))
     return await handleErrors(request, async () => {
       // We have received an HTTP request! Parse the URL and route the request.
 
